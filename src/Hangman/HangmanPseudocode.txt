@@ -1,0 +1,47 @@
+DECLARE String[] wordList = new String[n]
+DECLARE boolean user = true
+DECLARE char user_input = ''
+DECLARE int guesses = 0
+WHILE user == true
+	Pick random word from wordList
+	DECLARE string word = word picked from wordList
+	Take the length of word picked, add one to it, and display number of characters in the form of underscores
+	DECLARE string user_word = underscores times number of characters in the word
+	DECLARE string wrong_chars = underscores times value of guesses
+	WHILE guesses <= 5
+		Prompt user to enter a character
+		IF user_input not in word THEN
+			Display wrong char in the place of an underscore in the string wrong_chars
+			updates wrong_chars
+			increment guesses
+		ELSE IF user_input in word THEN
+			Display user_input in place of the underscore in every correct position
+			updates user_word
+		ELSE
+			Prompt user that input is invalid
+		ENDIF
+		IF '_' not in user_word
+			Inform user they won the game
+		Prompt to play again
+			IF yes
+				reset guesses (This should in theory restart the loop)
+				reset all variables
+			ELSE 
+				Prompt user thanks for playing the game
+				user = false (This breaks the main loop)
+			ENDIF
+		ENDIF
+	ENDWHILE
+	If guesses > 5
+		Inform User they lost
+		Prompt to play again
+		IF yes
+			reset guesses (This should in theory restart the loop)
+			reset all variables
+		ELSE 
+			Prompt user thanks for playing the game
+			user = false (This breaks the main loop)
+		ENDIF
+	ENDIF
+	
+ENDWHILE
