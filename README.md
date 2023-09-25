@@ -7,4 +7,4 @@ A seven letter word guessing game resembling the logic of Wordle in a command li
 
 ![Logic Flow](https://github.com/Juntian-Deng/AdvCompPro2/blob/main/images/Hangman.drawio)
 
-![Source Code](https://github.com/Juntian-Deng/AdvCompPro2/tree/main/src/Hangman)
+[Source Code](https://github.com/Juntian-Deng/AdvCompPro2/tree/main/src/Hangman)
